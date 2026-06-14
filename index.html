@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Bello Ibrahim (Baylow) | Professional Web Designer & Frontend Developer</title>
+    <meta name="description"
+        content="Portfolio of Bello Ibrahim (Baylow), a world-class Web Designer and Frontend Developer specializing in premium, responsive, and interactive websites. Explore services, projects, and custom UI/UX solutions.">
+    <meta name="keywords"
+        content="Bello Ibrahim, Baylow, Web Designer, Frontend Developer, UI/UX Design, Portfolio, React Developer, Custom Websites, Responsive Design">
+    <meta name="author" content="Bello Ibrahim (Baylow)">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baylow.dev/">
+    <meta property="og:title" content="Bello Ibrahim (Baylow) | Professional Web Designer & Frontend Developer">
+    <meta property="og:description"
+        content="Portfolio of Bello Ibrahim (Baylow), specializing in futuristic, premium, and interactive web experiences.">
+    <meta property="og:image" content="images/og-share.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://baylow.dev/">
+    <meta property="twitter:title" content="Bello Ibrahim (Baylow) | Professional Web Designer & Frontend Developer">
+    <meta property="twitter:description"
+        content="Portfolio of Bello Ibrahim (Baylow), specializing in futuristic, premium, and interactive web experiences.">
+    <meta property="twitter:image" content="images/og-share.jpg">
+
+    <!-- Google Fonts (Inter & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Site Border Frame -->
+    <div class="site-border-frame"></div>
+
+    <!-- Loading Screen (Stunning Portfolio Preloader & Splash Screen) -->
+    <div id="loader" class="loader-container">
+        <!-- Dedicated preloader canvas for particles and aurora glows -->
+        <canvas id="intro-canvas"></canvas>
+        <div class="intro-aurora glow-1"></div>
+        <div class="intro-aurora glow-2"></div>
+        
+        <!-- Central animation content wrapper -->
+        <div class="loader-content intro-content">
+            <!-- Step 1 & 2: Glowing Logo and Full Name -->
+            <div class="intro-brand">
+                <div class="intro-logo">
+                    <span class="logo-letter" style="--i:1">B</span>
+                    <span class="logo-letter" style="--i:2">A</span>
+                    <span class="logo-letter" style="--i:3">Y</span>
+                    <span class="logo-letter" style="--i:4">L</span>
+                    <span class="logo-letter" style="--i:5">O</span>
+                    <span class="logo-letter" style="--i:6">W</span>
+                </div>
+                <div class="intro-name">Bello Ibrahim</div>
+            </div>
+
+            <!-- Step 3: Professional Titles Typing Sequence -->
+            <div class="intro-titles">
+                <span id="intro-typing-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+
+            <!-- Step 4: Slogans Screen -->
+            <div class="intro-slogan">
+                <p id="intro-slogan-text"></p>
+            </div>
+
+            <!-- Step 5: Glassmorphic Stats Grid -->
+            <div class="intro-stats">
+                <div class="intro-stats-grid">
+                    <div class="intro-stat-card">
+                        <div class="stat-card-icon"><i data-lucide="award"></i></div>
+                        <div class="stat-number-wrap">
+                            <span class="intro-stat-num" data-target="120">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <span class="intro-stat-label">Projects Completed</span>
+                    </div>
+                    <div class="intro-stat-card">
+                        <div class="stat-card-icon"><i data-lucide="smile"></i></div>
+                        <div class="stat-number-wrap">
+                            <span class="intro-stat-num" data-target="99">0</span><span class="stat-plus">%</span>
+                        </div>
+                        <span class="intro-stat-label">Happy Clients</span>
+                    </div>
+                    <div class="intro-stat-card">
+                        <div class="stat-card-icon"><i data-lucide="monitor"></i></div>
+                        <div class="stat-number-wrap">
+                            <span class="intro-stat-num" data-target="85">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <span class="intro-stat-label">Websites Designed</span>
+                    </div>
+                    <div class="intro-stat-card">
+                        <div class="stat-card-icon"><i data-lucide="lightbulb"></i></div>
+                        <div class="stat-number-wrap">
+                            <span class="intro-stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <span class="intro-stat-label">Creative Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light Burst Overlay for Step 6 Reveal -->
+        <div class="reveal-light-burst"></div>
+
+        <!-- Skip Intro Floating Button -->
+        <button id="skip-intro" class="skip-intro-btn" aria-label="Skip Intro Animation">
+            <span>Skip Intro</span>
+            <i data-lucide="chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Canvas for Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Aurora Background Glows -->
+    <div class="aurora-glow glow-1"></div>
+    <div class="aurora-glow glow-2"></div>
+    <div class="aurora-glow glow-3"></div>
+
+    <!-- Header / Premium Navbar -->
+    <header class="navbar-header" id="navbar">
+        <div class="navbar-container container">
+            <a href="#home" class="logo">
+                <span>B</span>aylow<span class="dot">.</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#specialties" class="nav-link">Specialties</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <!-- Viewport Toggle Button -->
+                <button id="viewport-toggle" class="theme-btn" aria-label="Toggle Viewport">
+                    <i data-lucide="monitor" class="icon-desktop"></i>
+                    <i data-lucide="smartphone" class="icon-mobile" style="display: none;"></i>
+                </button>
+
+                <!-- CTA Navigation Button -->
+                <a href="#contact" class="btn btn-nav">Let's Talk</a>
+
+                <!-- Mobile Menu Button -->
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge reveal-fade">
+                        <span class="badge-dot"></span>
+                        Available for Freelance & Full-time
+                    </div>
+                    <h1 class="reveal-slide-up">
+                        Design. Code. Elevate.<br>
+                        I'm <span class="gradient-text">Bello Ibrahim</span>
+                    </h1>
+                    <div class="typing-container reveal-fade">
+                        <span class="static-txt">A Creative</span>
+                        <span class="dynamic-txt" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description reveal-slide-up">
+                        Crafting high-converting, premium interactive digital experiences for startups, entrepreneurs,
+                        and global agencies. Translating complex code into stunning visual designs.
+                    </p>
+                    <div class="hero-cta reveal-fade">
+                        <a href="#contact" class="btn btn-primary btn-ripple">
+                            Hire Me <i data-lucide="arrow-up-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary btn-ripple">
+                            View Portfolio
+                        </a>
+                        <a href="#" class="btn-cv" onclick="alert('CV Download simulated successfully!')">
+                            Download CV <i data-lucide="download"></i>
+                        </a>
+                    </div>
+                    <!-- Hero Stats -->
+                    <div class="hero-stats reveal-fade">
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="120">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="99">0</span><span class="stat-plus">%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal-zoom">
+                    <!-- Glassmorphic Card Container -->
+                    <div class="avatar-frame">
+                        <div class="floating-shape shape-1"></div>
+                        <div class="floating-shape shape-2"></div>
+                        <div class="floating-shape shape-3"></div>
+
+                        <!-- Avatar Graphic -->
+                        <div class="avatar-inner">
+                            <svg class="dev-graphic" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#7C3AED" />
+                                        <stop offset="50%" stop-color="#2563EB" />
+                                        <stop offset="100%" stop-color="#06B6D4" />
+                                    </linearGradient>
+                                    <radialGradient id="meshGrad" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#EC4899" stop-opacity="0.3" />
+                                        <stop offset="100%" stop-color="#050816" stop-opacity="0" />
+                                    </radialGradient>
+                                </defs>
+                                <!-- Abstract Glowing Shapes -->
+                                <circle cx="200" cy="200" r="140" fill="url(#meshGrad)" />
+                                <path d="M120,200 Q200,80 280,200 T360,200" fill="none" stroke="url(#avatarGrad)"
+                                    stroke-width="4" stroke-linecap="round" opacity="0.6" />
+                                <circle cx="200" cy="200" r="100" fill="none" stroke="#8B5CF6" stroke-width="2"
+                                    stroke-dasharray="8 8" class="rotating-circle" />
+                                <circle cx="200" cy="200" r="70" fill="none" stroke="#06B6D4" stroke-width="2"
+                                    class="rotating-circle-reverse" />
+                                <!-- Programmer Silhouette Icon -->
+                                <g transform="translate(140,135) scale(0.6)">
+                                    <path
+                                        d="M100 30 C50 30 30 70 30 110 C30 150 50 190 100 190 C150 190 170 150 170 110 C170 70 150 30 100 30 Z"
+                                        fill="url(#avatarGrad)" />
+                                    <path
+                                        d="M30 110 L10 110 C4 110 0 114 0 120 L0 180 C0 191 9 200 20 200 L180 200 C191 200 200 191 200 180 L200 120 C200 114 196 110 190 110 L170 110"
+                                        fill="none" stroke="url(#avatarGrad)" stroke-width="8" />
+                                </g>
+                                <!-- Interactive elements / floating dots -->
+                                <circle cx="100" cy="120" r="6" fill="#10B981" />
+                                <circle cx="310" cy="150" r="8" fill="#F59E0B" />
+                                <circle cx="130" cy="290" r="10" fill="#EF4444" />
+                            </svg>
+                        </div>
+
+                        <!-- Float statistics box -->
+                        <div class="floating-box fb-1 reveal-slide-up">
+                            <div class="fb-icon"><i data-lucide="code-2"></i></div>
+                            <div>
+                                <h4>Interactive UI</h4>
+                                <p>CSS/JS Specialist</p>
+                            </div>
+                        </div>
+                        <div class="floating-box fb-2 reveal-slide-up">
+                            <div class="fb-icon"><i data-lucide="palette"></i></div>
+                            <div>
+                                <h4>Premium Design</h4>
+                                <p>Figma & Webflow Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mouse scroll indicator -->
+            <a href="#about" class="scroll-down">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-txt">Scroll Down</span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">Get to Know Me</span>
+                    <h2>About Bello Ibrahim</h2>
+                    <p class="section-desc">Merging creative artistry with logic-driven clean code to deliver digital
+                        masterpieces.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-visual reveal-slide-right">
+                        <div class="about-image-wrapper">
+                            <!-- SVG Art illustrating web designer workflow -->
+                            <svg class="about-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3B82F6" />
+                                        <stop offset="100%" stop-color="#8B5CF6" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="30" y="30" width="340" height="340" rx="30" fill="#0F172A"
+                                    stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="10 10" />
+                                <g transform="translate(60, 60)">
+                                    <!-- Browser window mockup inside design -->
+                                    <rect x="0" y="0" width="280" height="180" rx="15" fill="#1E293B" />
+                                    <circle cx="20" cy="15" r="5" fill="#EF4444" />
+                                    <circle cx="35" cy="15" r="5" fill="#F59E0B" />
+                                    <circle cx="50" cy="15" r="5" fill="#10B981" />
+                                    <!-- Inner code design -->
+                                    <rect x="20" y="45" width="240" height="10" rx="5" fill="#334155" />
+                                    <rect x="20" y="65" width="180" height="10" rx="5" fill="#334155" />
+                                    <rect x="20" y="85" width="130" height="10" rx="5" fill="#8B5CF6" />
+                                    <rect x="20" y="105" width="210" height="10" rx="5" fill="#06B6D4" />
+                                    <!-- UI Design elements -->
+                                    <circle cx="200" cy="85" r="25" fill="none" stroke="#2563EB" stroke-width="4" />
+                                    <path d="M190 85 L210 85" stroke="#2563EB" stroke-width="4" />
+                                    <path d="M200 75 L200 95" stroke="#2563EB" stroke-width="4" />
+                                </g>
+                                <g transform="translate(60, 260)">
+                                    <!-- Laptop stand/graphic representation -->
+                                    <rect x="20" y="0" width="240" height="15" rx="5" fill="#7C3AED" />
+                                    <rect x="0" y="15" width="280" height="15" rx="7" fill="#2563EB" />
+                                </g>
+                            </svg>
+                            <!-- Animated Experience Badge -->
+                            <div class="exp-badge reveal-zoom">
+                                <span class="badge-num">5+</span>
+                                <span class="badge-lbl">Years of Crafting Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-content reveal-slide-left">
+                        <h3>Turning Visions into Functional Realities</h3>
+                        <p class="lead-text">
+                            I am a designer and developer who excels at building functional interfaces, interactive
+                            applications, and delightful digital products.
+                        </p>
+                        <p>
+                            With over 5 years of industry experience, I've collaborated with startups, businesses, and
+                            creative directors to construct websites that look gorgeous and perform flawlessly. My
+                            process centers on deep client communication, user-centered layouts, SEO foundations, and
+                            state-of-the-art animations.
+                        </p>
+
+                        <!-- Cards inside About -->
+                        <div class="about-cards">
+                            <div class="about-card">
+                                <div class="ac-icon"><i data-lucide="zap"></i></div>
+                                <h4>Speed & Quality</h4>
+                                <p>Delivering high-performance websites with optimized loading times and pixel-perfect
+                                    responsiveness.</p>
+                            </div>
+                            <div class="about-card">
+                                <div class="ac-icon"><i data-lucide="users"></i></div>
+                                <h4>Client Focused</h4>
+                                <p>Understanding goals, tailoring solutions, and offering constant transparent updates
+                                    throughout the lifecycle.</p>
+                            </div>
+                        </div>
+
+                        <!-- CTA info -->
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                            <div class="personal-info-links">
+                                <a href="mailto:hello@baylow.dev" class="info-link"><i data-lucide="mail"></i>
+                                    hello@baylow.dev</a>
+                                <span class="info-link"><i data-lucide="map-pin"></i> Lagos, Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">My Arsenal</span>
+                    <h2>Skills & Technologies</h2>
+                    <p class="section-desc">A deep dive into the technology stack and core skills I use to bring ideas
+                        to life.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Left Side: Circular Progress Skills -->
+                    <div class="skills-column circular-skills reveal-slide-right">
+                        <h3>Core Competencies</h3>
+                        <div class="circular-grid">
+
+                            <div class="circle-skill-card">
+                                <div class="circle-box">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="40" class="bg-circle"></circle>
+                                        <circle cx="50" cy="50" r="40" class="fg-circle"
+                                            style="stroke-dashoffset: calc(251.2 - (251.2 * 95) / 100); stroke: #7C3AED;">
+                                        </circle>
+                                    </svg>
+                                    <div class="circle-value">95%</div>
+                                </div>
+                                <h4>UI/UX Design</h4>
+                            </div>
+
+                            <div class="circle-skill-card">
+                                <div class="circle-box">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="40" class="bg-circle"></circle>
+                                        <circle cx="50" cy="50" r="40" class="fg-circle"
+                                            style="stroke-dashoffset: calc(251.2 - (251.2 * 90) / 100); stroke: #2563EB;">
+                                        </circle>
+                                    </svg>
+                                    <div class="circle-value">90%</div>
+                                </div>
+                                <h4>Frontend Dev</h4>
+                            </div>
+
+                            <div class="circle-skill-card">
+                                <div class="circle-box">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="40" class="bg-circle"></circle>
+                                        <circle cx="50" cy="50" r="40" class="fg-circle"
+                                            style="stroke-dashoffset: calc(251.2 - (251.2 * 85) / 100); stroke: #06B6D4;">
+                                        </circle>
+                                    </svg>
+                                    <div class="circle-value">85%</div>
+                                </div>
+                                <h4>Responsive Layouts</h4>
+                            </div>
+
+                            <div class="circle-skill-card">
+                                <div class="circle-box">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="40" class="bg-circle"></circle>
+                                        <circle cx="50" cy="50" r="40" class="fg-circle"
+                                            style="stroke-dashoffset: calc(251.2 - (251.2 * 80) / 100); stroke: #10B981;">
+                                        </circle>
+                                    </svg>
+                                    <div class="circle-value">80%</div>
+                                </div>
+                                <h4>SEO Optimization</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Progress Bar Skills -->
+                    <div class="skills-column list-skills reveal-slide-left">
+                        <h3>Technical Skills</h3>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="html5" class="tech-icon html-color"></i>
+                                    HTML5</span>
+                                <span class="skill-percent">98%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 98%; background-color: #EF4444;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="code" class="tech-icon css-color"></i> CSS3 /
+                                    SCSS</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 95%; background-color: #2563EB;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="braces" class="tech-icon js-color"></i>
+                                    JavaScript (ES6+)</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 90%; background-color: #F59E0B;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="atom" class="tech-icon react-color"></i>
+                                    React.js</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 85%; background-color: #06B6D4;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="terminal" class="tech-icon python-color"></i>
+                                    Python</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 75%; background-color: #8B5CF6;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-group">
+                            <div class="skill-bar-header">
+                                <span class="skill-name"><i data-lucide="github" class="tech-icon git-color"></i> Git &
+                                    GitHub</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="width: 88%; background-color: #CBD5E1;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">What I Offer</span>
+                    <h2>Premium Services</h2>
+                    <p class="section-desc">Tailored digital services to build credibility, scale your business, and
+                        engage your audience.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="laptop"></i></div>
+                        <h3>Portfolio Websites</h3>
+                        <p>Futuristic and unique showcase spaces that help professionals, artists, and creators land
+                            high-paying contracts.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="briefcase"></i></div>
+                        <h3>Business Websites</h3>
+                        <p>Conversion-driven websites that communicate authority, streamline operations, and capture
+                            prospective leads.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="layers"></i></div>
+                        <h3>Landing Pages</h3>
+                        <p>High-conversion landing pages focused on singular campaigns, designed to turn clicks into
+                            sales or sign-ups.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="shopping-cart"></i></div>
+                        <h3>E-commerce Websites</h3>
+                        <p>Scalable, safe, and engaging digital storefronts with seamless user flows, animations, and
+                            cart experiences.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="feather"></i></div>
+                        <h3>Blog Websites</h3>
+                        <p>Beautiful typography-focused publishing platforms optimized for readability, accessibility,
+                            and SEO indexing.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="refresh-cw"></i></div>
+                        <h3>Website Redesign</h3>
+                        <p>Upgrade outdated layouts to modern, premium, glassmorphic interfaces with faster loading
+                            speeds and SEO audits.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 7 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="compass"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Interactive layout architectures, user research, wireframing, and premium Figma prototypes
+                            that developers love.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+
+                    <!-- Service 8 -->
+                    <div class="service-card reveal-slide-up">
+                        <div class="service-glow"></div>
+                        <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Website Maintenance</h3>
+                        <p>Reliable support packages keeping your online presence secure, backed up, fast, and
+                            constantly up to date.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Specialties Section -->
+        <section id="specialties" class="specialties-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">🔥 Launching Soon</span>
+                    <h2>Industry Specialties</h2>
+                    <p class="section-desc">Premium, handcrafted website experiences currently in the forge — built for industries that demand excellence. Get notified when they drop.</p>
+                </div>
+
+                <div class="specialties-grid">
+
+                    <!-- 1: Educational Platform -->
+                    <div class="specialty-card spec-edu reveal-slide-up">
+                        <div class="spec-card-glow"></div>
+                        <div class="spec-hot-badge">🔥 HOT</div>
+                        <div class="spec-icon-wrapper spec-icon-edu">
+                            <i data-lucide="graduation-cap"></i>
+                            <div class="spec-icon-ring"></div>
+                        </div>
+                        <h3>Educational Websites</h3>
+                        <p class="spec-desc">Immersive learning platforms for schools, universities & e-learning academies with interactive course modules.</p>
+                        <ul class="spec-features">
+                            <li><i data-lucide="check-circle-2"></i> Course dashboards</li>
+                            <li><i data-lucide="check-circle-2"></i> Student portals</li>
+                            <li><i data-lucide="check-circle-2"></i> Progress tracking</li>
+                        </ul>
+                        <div class="spec-launch-bar">
+                            <div class="spec-launch-badge">
+                                <span class="spec-launch-dot"></span>
+                                Launching Soon
+                            </div>
+                            <button class="spec-notify-btn" onclick="alert('🔔 You will be notified when Educational Websites launch!')">
+                                <i data-lucide="bell"></i> Notify Me
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2: Business / E-Commerce -->
+                    <div class="specialty-card spec-shop reveal-slide-up">
+                        <div class="spec-card-glow"></div>
+                        <div class="spec-hot-badge">🔥 HOT</div>
+                        <div class="spec-icon-wrapper spec-icon-shop">
+                            <i data-lucide="shopping-bag"></i>
+                            <div class="spec-icon-ring"></div>
+                        </div>
+                        <h3>Business & E-Commerce</h3>
+                        <p class="spec-desc">Conversion-driven storefronts & corporate sites with seamless checkout flows and real-time inventory.</p>
+                        <ul class="spec-features">
+                            <li><i data-lucide="check-circle-2"></i> Product showcases</li>
+                            <li><i data-lucide="check-circle-2"></i> Payment integrations</li>
+                            <li><i data-lucide="check-circle-2"></i> Analytics dashboards</li>
+                        </ul>
+                        <div class="spec-launch-bar">
+                            <div class="spec-launch-badge">
+                                <span class="spec-launch-dot"></span>
+                                Launching Soon
+                            </div>
+                            <button class="spec-notify-btn" onclick="alert('🔔 You will be notified when E-Commerce sites launch!')">
+                                <i data-lucide="bell"></i> Notify Me
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3: Real Estate -->
+                    <div class="specialty-card spec-home reveal-slide-up">
+                        <div class="spec-card-glow"></div>
+                        <div class="spec-hot-badge">🔥 HOT</div>
+                        <div class="spec-icon-wrapper spec-icon-home">
+                            <i data-lucide="home"></i>
+                            <div class="spec-icon-ring"></div>
+                        </div>
+                        <h3>Real Estate Websites</h3>
+                        <p class="spec-desc">Property listing platforms with interactive map views, virtual tours & intelligent search filtering.</p>
+                        <ul class="spec-features">
+                            <li><i data-lucide="check-circle-2"></i> Property galleries</li>
+                            <li><i data-lucide="check-circle-2"></i> Map integrations</li>
+                            <li><i data-lucide="check-circle-2"></i> Agent CRM tools</li>
+                        </ul>
+                        <div class="spec-launch-bar">
+                            <div class="spec-launch-badge">
+                                <span class="spec-launch-dot"></span>
+                                Launching Soon
+                            </div>
+                            <button class="spec-notify-btn" onclick="alert('🔔 You will be notified when Real Estate sites launch!')">
+                                <i data-lucide="bell"></i> Notify Me
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 4: Entertainment / Media -->
+                    <div class="specialty-card spec-media reveal-slide-up">
+                        <div class="spec-card-glow"></div>
+                        <div class="spec-hot-badge">🔥 HOT</div>
+                        <div class="spec-icon-wrapper spec-icon-media">
+                            <i data-lucide="tv"></i>
+                            <div class="spec-icon-ring"></div>
+                        </div>
+                        <h3>Entertainment & Media</h3>
+                        <p class="spec-desc">Stunning media hubs for music artists, streamers, event promoters & content creators with immersive UX.</p>
+                        <ul class="spec-features">
+                            <li><i data-lucide="check-circle-2"></i> Media players</li>
+                            <li><i data-lucide="check-circle-2"></i> Event scheduling</li>
+                            <li><i data-lucide="check-circle-2"></i> Fan engagement</li>
+                        </ul>
+                        <div class="spec-launch-bar">
+                            <div class="spec-launch-badge">
+                                <span class="spec-launch-dot"></span>
+                                Launching Soon
+                            </div>
+                            <button class="spec-notify-btn" onclick="alert('🔔 You will be notified when Entertainment sites launch!')">
+                                <i data-lucide="bell"></i> Notify Me
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">My Creations</span>
+                    <h2>Featured Projects</h2>
+                    <p class="section-desc">Explore a selection of premium websites built for clients and products
+                        worldwide.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="projects-filters reveal-fade">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="business">Business</button>
+                    <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card reveal-slide-up" data-category="ecommerce">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (e-commerce storefront mockup) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <circle cx="150" cy="100" r="60" fill="#7C3AED" opacity="0.3" />
+                                <path d="M120 70 H180 L170 130 H130 Z" fill="#2563EB" opacity="0.8" />
+                                <circle cx="135" cy="145" r="8" fill="#06B6D4" />
+                                <circle cx="165" cy="145" r="8" fill="#06B6D4" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">E-commerce</span>
+                            <h3>AuraLux Jewelry Store</h3>
+                            <p>Premium dark-themed e-commerce storefront for a high-end luxury jewelry brand, complete
+                                with cart animations.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3 SCSS</span>
+                                <span>Vanilla JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal-slide-up" data-category="business">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (business chart representation) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <path d="M50 150 L100 110 L150 130 L200 80 L250 60" fill="none" stroke="#10B981"
+                                    stroke-width="6" stroke-linecap="round" />
+                                <circle cx="250" cy="60" r="10" fill="#EC4899" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">Business</span>
+                            <h3>Apex Analytics Platform</h3>
+                            <p>SaaS business metrics platform features custom canvas-based line graphs, filters, and
+                                real-time dashboard layouts.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>CSS Grid</span>
+                                <span>Canvas API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal-slide-up" data-category="landing">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (abstract futuristic spheres) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <circle cx="100" cy="100" r="40" fill="#06B6D4" opacity="0.6" />
+                                <circle cx="200" cy="100" r="45" fill="#EF4444" opacity="0.6" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">Landing Page</span>
+                            <h3>Nova VR Campaign Page</h3>
+                            <p>Ultra-futuristic landing page utilizing 3D hover effects, glassmorphism card highlights,
+                                and particle accents.</p>
+                            <div class="project-tags">
+                                <span>UI Design</span>
+                                <span>Glassmorphism</span>
+                                <span>JS Animations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card reveal-slide-up" data-category="portfolio">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (artistic layouts/wireframes) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <rect x="30" y="30" width="100" height="140" rx="10" fill="#7C3AED" opacity="0.5" />
+                                <circle cx="200" cy="100" r="30" fill="#F59E0B" opacity="0.7" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">Portfolio</span>
+                            <h3>Elixir Architect Studio</h3>
+                            <p>A minimalist design portfolio showcasing 3D project modals, micro-interactions, and
+                                slide-in screen loaders.</p>
+                            <div class="project-tags">
+                                <span>SEO Friendly</span>
+                                <span>Vanilla HTML/CSS</span>
+                                <span>Interactions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card reveal-slide-up" data-category="business">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (charts and nodes) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <circle cx="70" cy="100" r="15" fill="#8B5CF6" />
+                                <circle cx="150" cy="70" r="15" fill="#8B5CF6" />
+                                <circle cx="150" cy="130" r="15" fill="#8B5CF6" />
+                                <circle cx="230" cy="100" r="15" fill="#8B5CF6" />
+                                <line x1="85" y1="100" x2="135" y2="70" stroke="#FFF" stroke-width="2" />
+                                <line x1="85" y1="100" x2="135" y2="130" stroke="#FFF" stroke-width="2" />
+                                <line x1="165" y1="70" x2="215" y2="100" stroke="#FFF" stroke-width="2" />
+                                <line x1="165" y1="130" x2="215" y2="100" stroke="#FFF" stroke-width="2" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">Business</span>
+                            <h3>Zenith Logistics Hub</h3>
+                            <p>Real-time shipping management dashboard mockup featuring sleek modern cards, collapsible
+                                navs, and animations.</p>
+                            <div class="project-tags">
+                                <span>CSS Grid</span>
+                                <span>Flexbox</span>
+                                <span>Dynamic States</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card reveal-slide-up" data-category="landing">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Project visual (isometric app block) -->
+                            <svg class="project-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <polygon points="150,50 220,90 150,130 80,90" fill="#10B981" opacity="0.6" />
+                                <polygon points="150,80 220,120 150,160 80,120" fill="#2563EB" opacity="0.6" />
+                            </svg>
+                            <div class="project-overlay">
+                                <div class="overlay-buttons">
+                                    <a href="#" class="overlay-btn" aria-label="Live Demo"
+                                        onclick="alert('Simulation: Loading Live Demo...')"><i
+                                            data-lucide="external-link"></i></a>
+                                    <a href="#" class="overlay-btn" aria-label="GitHub Repository"
+                                        onclick="alert('Simulation: Loading GitHub Code...')"><i
+                                            data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-cat">Landing Page</span>
+                            <h3>SkyPay FinTech Landing</h3>
+                            <p>Ultra clean fintech landing page displaying floating isometric components, gradients, and
+                                custom testimonial sliders.</p>
+                            <div class="project-tags">
+                                <span>Webflow Layout</span>
+                                <span>Figma Design</span>
+                                <span>Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements / Countup Stats Section -->
+        <section class="achievements-section section-padding">
+            <div class="achievements-glow"></div>
+            <div class="container achievements-grid">
+
+                <div class="achievement-card reveal-zoom">
+                    <div class="ach-icon"><i data-lucide="folder-check"></i></div>
+                    <span class="counter-num" data-target="120">0</span><span class="plus-sign">+</span>
+                    <p>Completed Projects</p>
+                </div>
+
+                <div class="achievement-card reveal-zoom">
+                    <div class="ach-icon"><i data-lucide="users"></i></div>
+                    <span class="counter-num" data-target="80">0</span><span class="plus-sign">+</span>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="achievement-card reveal-zoom">
+                    <div class="ach-icon"><i data-lucide="award"></i></div>
+                    <span class="counter-num" data-target="5">0</span><span class="plus-sign">+</span>
+                    <p>Years of Experience</p>
+                </div>
+
+                <div class="achievement-card reveal-zoom">
+                    <div class="ach-icon"><i data-lucide="thumbs-up"></i></div>
+                    <span class="counter-num" data-target="99">0</span><span class="plus-sign">%</span>
+                    <p>Positive Reviews</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section -->
+        <section class="why-choose-me section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">My Commitments</span>
+                    <h2>Why Work With Me?</h2>
+                    <p class="section-desc">Bringing exceptional quality, prompt delivery, and cutting-edge design
+                        solutions to your brand.</p>
+                </div>
+
+                <div class="why-grid">
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-fast"><i data-lucide="clock"></i></div>
+                        <h3>Fast Delivery</h3>
+                        <p>Strict deadline compliance. Agile workflows ensure quick iteration cycles and on-time project
+                            launching.</p>
+                    </div>
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-design"><i data-lucide="pen-tool"></i></div>
+                        <h3>Professional Design</h3>
+                        <p>Unique glassmorphic layouts and custom graphics structured to impress and built to match
+                            target conversions.</p>
+                    </div>
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-layout"><i data-lucide="smartphone"></i></div>
+                        <h3>Responsive Layouts</h3>
+                        <p>Websites optimized across all screen resolutions including ultra-wides, laptops, iPads, and
+                            standard smartphones.</p>
+                    </div>
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-seo"><i data-lucide="search"></i></div>
+                        <h3>SEO-Friendly Websites</h3>
+                        <p>Semantic HTML nodes, fast image loading, optimized CSS/JS rendering, and custom structured
+                            schema metadata.</p>
+                    </div>
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-tech"><i data-lucide="cpu"></i></div>
+                        <h3>Modern Technologies</h3>
+                        <p>Implementing optimized ES6+ scripts, responsive CSS grid/flexboxes, canvas effects, and
+                            lightweight libraries.</p>
+                    </div>
+
+                    <div class="why-card reveal-slide-up">
+                        <div class="why-icon icon-satisfaction"><i data-lucide="smile"></i></div>
+                        <h3>Client Satisfaction</h3>
+                        <p>Continuous collaboration, transparency, customized post-launch revision, and long-term
+                            project support.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">The Workflow</span>
+                    <h2>My Working Process</h2>
+                    <p class="section-desc">A step-by-step walk through my structured website design and development
+                        blueprint.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-item reveal-slide-right">
+                        <div class="timeline-dot">01</div>
+                        <div class="timeline-content">
+                            <h3>Consultation</h3>
+                            <p>We review your brand requirements, audience demographic, project objectives, and set
+                                clear deadlines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-item reveal-slide-left">
+                        <div class="timeline-dot">02</div>
+                        <div class="timeline-content">
+                            <h3>Planning</h3>
+                            <p>Structuring the website architecture, selecting style palettes, mapping client routes,
+                                and organizing content structure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-item reveal-slide-right">
+                        <div class="timeline-dot">03</div>
+                        <div class="timeline-content">
+                            <h3>UI/UX Design</h3>
+                            <p>Drafting beautiful, premium visual layouts in Figma. Designing intuitive desktop and
+                                mobile interactive prototypes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-item reveal-slide-left">
+                        <div class="timeline-dot">04</div>
+                        <div class="timeline-content">
+                            <h3>Development</h3>
+                            <p>Translating design prototypes into high-performance, clean, and semantic code featuring
+                                modern animations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="timeline-item reveal-slide-right">
+                        <div class="timeline-dot">05</div>
+                        <div class="timeline-content">
+                            <h3>Testing</h3>
+                            <p>Rigorous compatibility debugging across multiple device systems. Checking page speeds,
+                                styles, and form routing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="timeline-item reveal-slide-left">
+                        <div class="timeline-dot">06</div>
+                        <div class="timeline-content">
+                            <h3>Launch & Support</h3>
+                            <p>Deploying the website live. Setting up Google analytics integration and providing
+                                maintenance packages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">Success Stories</span>
+                    <h2>Client Testimonials</h2>
+                    <p class="section-desc">What business leaders, entrepreneurs, and agencies say about working with
+                        Baylow.</p>
+                </div>
+
+                <!-- Slider Container -->
+                <div class="slider-wrapper reveal-zoom">
+                    <div class="slider-container" id="slider-container">
+
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content-card">
+                                <div class="rating">
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                </div>
+                                <p class="review-text">
+                                    "Bello's work exceeded our expectations. The custom portfolio website he designed
+                                    has significantly elevated our agency branding and already attracted high-paying
+                                    startup clients."
+                                </p>
+                                <div class="client-meta">
+                                    <div class="client-avatar">
+                                        <!-- Custom avatar SVG -->
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="50" r="50" fill="#2563EB" />
+                                            <text x="50%" y="60%" font-size="36" fill="#FFF" font-family="sans-serif"
+                                                text-anchor="middle" dominant-baseline="middle">AS</text>
+                                        </svg>
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Sarah Anderson</h4>
+                                        <p>Creative Director, Apex Digital</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content-card">
+                                <div class="rating">
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                </div>
+                                <p class="review-text">
+                                    "Outstanding frontend performance. Bello transformed our outdated dashboard into a
+                                    stunning, responsive, glassmorphic client interface. Highly recommend his
+                                    development skills!"
+                                </p>
+                                <div class="client-meta">
+                                    <div class="client-avatar">
+                                        <!-- Custom avatar SVG -->
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="50" r="50" fill="#7C3AED" />
+                                            <text x="50%" y="60%" font-size="36" fill="#FFF" font-family="sans-serif"
+                                                text-anchor="middle" dominant-baseline="middle">MO</text>
+                                        </svg>
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Marcus O'Neill</h4>
+                                        <p>Founder, Nova Tech Ventures</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content-card">
+                                <div class="rating">
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                    <i data-lucide="star" class="star-filled"></i>
+                                </div>
+                                <p class="review-text">
+                                    "A flawless collaborative experience. Quick turnaround times, incredible responsive
+                                    layouts, and modern aesthetics. Bello brings premium design to another level."
+                                </p>
+                                <div class="client-meta">
+                                    <div class="client-avatar">
+                                        <!-- Custom avatar SVG -->
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="50" cy="50" r="50" fill="#10B981" />
+                                            <text x="50%" y="60%" font-size="36" fill="#FFF" font-family="sans-serif"
+                                                text-anchor="middle" dominant-baseline="middle">LL</text>
+                                        </svg>
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Leila Lopez</h4>
+                                        <p>E-commerce Manager, AuraLux Group</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Dots -->
+                    <div class="slider-dots" id="slider-dots">
+                        <!-- Dots rendered by script.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action Section -->
+        <section class="cta-section section-padding">
+            <div class="cta-background-gradient"></div>
+            <div class="container cta-content-wrapper reveal-zoom">
+                <h2>Let's Build Something<br><span class="gradient-text">Amazing Together</span></h2>
+                <p>Have an exciting project, startup concept, or brand that needs a premium web designer and frontend
+                    developer? Get in touch today and let's craft a digital masterpiece.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    <a href="mailto:hello@baylow.dev" class="btn btn-outline">Email Me Directly</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview Section -->
+        <section class="blog-preview-section section-padding">
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">Latest Insights</span>
+                    <h2>Read My Blog</h2>
+                    <p class="section-desc">Sharing thoughts, design theories, and frontend tips for developers and
+                        startups.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Post 1 -->
+                    <article class="blog-card reveal-slide-up">
+                        <div class="blog-img-wrapper">
+                            <!-- SVG blog visual (abstract nodes) -->
+                            <svg class="blog-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <circle cx="150" cy="90" r="30" fill="#06B6D4" opacity="0.4" />
+                                <text x="50%" y="50%" fill="#FFF" font-size="14" font-weight="bold"
+                                    font-family="sans-serif" text-anchor="middle">UI TRENDS</text>
+                            </svg>
+                        </div>
+                        <div class="blog-details">
+                            <span class="blog-date">June 12, 2026</span>
+                            <h3>The Art of Glassmorphic UI</h3>
+                            <p>How to balance backdrop blurs, subtle borders, and glowing backgrounds without
+                                compromising accessibility.</p>
+                            <a href="#" class="read-more-btn"
+                                onclick="alert('Simulation: Loading full blog post...')">Read Article <i
+                                    data-lucide="arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card reveal-slide-up">
+                        <div class="blog-img-wrapper">
+                            <!-- SVG blog visual (speed performance representation) -->
+                            <svg class="blog-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <path d="M50 120 L110 50 L170 100 L250 30" fill="none" stroke="#10B981"
+                                    stroke-width="4" />
+                                <text x="50%" y="50%" fill="#FFF" font-size="14" font-weight="bold"
+                                    font-family="sans-serif" text-anchor="middle">PERFORMANCE</text>
+                            </svg>
+                        </div>
+                        <div class="blog-details">
+                            <span class="blog-date">May 28, 2026</span>
+                            <h3>Optimizing Web Performance</h3>
+                            <p>Discover crucial optimization strategies to decrease page loading times and rank higher
+                                on Google search index.</p>
+                            <a href="#" class="read-more-btn"
+                                onclick="alert('Simulation: Loading full blog post...')">Read Article <i
+                                    data-lucide="arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card reveal-slide-up">
+                        <div class="blog-img-wrapper">
+                            <!-- SVG blog visual (responsive screen layouts) -->
+                            <svg class="blog-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#1E293B" />
+                                <rect x="80" y="40" width="140" height="100" rx="5" fill="#334155" />
+                                <rect x="200" y="60" width="40" height="80" rx="3" fill="#7C3AED" />
+                            </svg>
+                        </div>
+                        <div class="blog-details">
+                            <span class="blog-date">May 15, 2026</span>
+                            <h3>Design for All Screen Sizes</h3>
+                            <p>Key breakpoints, CSS grid practices, and fluid unit methods I use to design high-quality
+                                responsive websites.</p>
+                            <a href="#" class="read-more-btn"
+                                onclick="alert('Simulation: Loading full blog post...')">Read Article <i
+                                    data-lucide="arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <!-- Decorative glows -->
+            <div class="contact-glow-1"></div>
+            <div class="contact-glow-2"></div>
+
+            <div class="container">
+                <div class="section-title reveal-slide-up">
+                    <span class="subtitle">Get In Touch</span>
+                    <h2>Start A Project <span class="gradient-text">Together</span></h2>
+                    <p class="section-desc">Submit a detailed brief or say hello, and I will get back to you within 24
+                        business hours.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Contact Info Column -->
+                    <div class="contact-info-column reveal-slide-right">
+                        <div class="info-header">
+                            <h3>Let's talk about your next big idea.</h3>
+                            <p>I'm currently available to take on new projects. Drop me a line and let's create something magical.</p>
+                        </div>
+                        
+                        <div class="contact-cards">
+                            <div class="info-card-premium">
+                                <div class="icp-icon"><i data-lucide="mail"></i></div>
+                                <div class="icp-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:hello@baylow.dev">hello@baylow.dev</a>
+                                </div>
+                            </div>
+                            <div class="info-card-premium">
+                                <div class="icp-icon"><i data-lucide="phone"></i></div>
+                                <div class="icp-content">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+2348000000000">+234 (80) 000 000 00</a>
+                                </div>
+                            </div>
+                            <div class="info-card-premium">
+                                <div class="icp-icon"><i data-lucide="map-pin"></i></div>
+                                <div class="icp-content">
+                                    <h4>Location</h4>
+                                    <p>Lagos, Nigeria (Remote Worldwide)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect-premium">
+                            <h4>Connect</h4>
+                            <div class="social-links-premium">
+                                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-column reveal-slide-left">
+                        <div class="form-card-glass">
+                            <div class="form-card-glow"></div>
+                            <form id="contact-form" class="premium-form" novalidate>
+                                
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <input type="text" id="name" name="name" required>
+                                        <label for="name">Full Name</label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email" id="email" name="email" required>
+                                        <label for="email">Email Address</label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <select id="project-type" name="project-type" required>
+                                            <option value="" disabled selected></option>
+                                            <option value="portfolio">Portfolio Website</option>
+                                            <option value="business">Business Website</option>
+                                            <option value="ecommerce">E-Commerce Store</option>
+                                            <option value="landing">Landing Page</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="project-type" style="display: none;">Project Type</label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                    <div class="input-group">
+                                        <select id="budget" name="budget" required>
+                                            <option value="" disabled selected></option>
+                                            <option value="500-1000">$500 — $1,000</option>
+                                            <option value="1000-3000">$1,000 — $3,000</option>
+                                            <option value="3000-5000">$3,000 — $5,000</option>
+                                            <option value="5000+">$5,000+</option>
+                                        </select>
+                                        <label for="budget" style="display: none;">Estimated Budget</label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                    <label for="message">Tell me about your project</label>
+                                    <div class="input-border"></div>
+                                </div>
+
+                                <button type="submit" class="btn-submit-premium" onclick="event.preventDefault(); alert('Message sent successfully!');">
+                                    <span>Send Message</span>
+                                    <div class="btn-glow"></div>
+                                    <i data-lucide="send"></i>
+                                </button>
+                                
+                                <div id="form-feedback" class="form-feedback"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Marquee Section -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>🚀 UI/UX Design</span>
+            <span class="dot-separator">•</span>
+            <span>💻 Frontend Development</span>
+            <span class="dot-separator">•</span>
+            <span>📱 Responsive Layouts</span>
+            <span class="dot-separator">•</span>
+            <span>⚡ Performance Optimization</span>
+            <span class="dot-separator">•</span>
+            <span>🔍 SEO Friendly</span>
+            <span class="dot-separator">•</span>
+            <span>✨ Custom Animations</span>
+            <span class="dot-separator">•</span>
+            <span>🌐 E-commerce Solutions</span>
+            <span class="dot-separator">•</span>
+            <span>🎨 Brand Identity</span>
+            <span class="dot-separator">•</span>
+        </div>
+        <div class="marquee-content">
+            <span>🚀 UI/UX Design</span>
+            <span class="dot-separator">•</span>
+            <span>💻 Frontend Development</span>
+            <span class="dot-separator">•</span>
+            <span>📱 Responsive Layouts</span>
+            <span class="dot-separator">•</span>
+            <span>⚡ Performance Optimization</span>
+            <span class="dot-separator">•</span>
+            <span>🔍 SEO Friendly</span>
+            <span class="dot-separator">•</span>
+            <span>✨ Custom Animations</span>
+            <span class="dot-separator">•</span>
+            <span>🌐 E-commerce Solutions</span>
+            <span class="dot-separator">•</span>
+            <span>🎨 Brand Identity</span>
+            <span class="dot-separator">•</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="footer-gradient-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <div class="footer-main-grid">
+                <div class="footer-brand-col">
+                    <a href="#home" class="logo-footer">
+                        <div class="logo-icon">B</div>
+                        <span>Baylow<span class="dot" style="color: var(--color-accent);">.</span></span>
+                    </a>
+                    <p class="footer-bio">Designing the future of the web, one pixel at a time. Specializing in high-end, immersive, and conversion-focused digital experiences.</p>
+                    <div class="availability-badge">
+                        <span class="status-dot"></span> Available for Work
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Work</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter-col">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to my newsletter for the latest design trends and web development tips.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Bello Ibrahim (Baylow). All rights reserved.</p>
+                <div class="footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <span>Back to top</span>
+                    <div class="scroll-top-btn"><i data-lucide="chevron-up"></i></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
